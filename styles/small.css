@@ -44,6 +44,7 @@ header {
 
 nav {
     background-color: var(--nav-bg);
+    color: #ffffff;
 }
 
 nav ul {
