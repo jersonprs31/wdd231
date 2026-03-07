@@ -5,7 +5,6 @@
     --card-header-text: #fff;
     --card-body-bg: #d3d3d3;
     --nav-bg: #2b2b2b;
-    --nav-text: #fff;
     --completed-bg: #8c8c8c;
     --incomplete-bg: #e0e0e0;
 }
@@ -61,14 +60,15 @@ nav ul.open {
 
 nav a {
     display: block;
-    color: var(--nav-text);
+    color: #ffffff;
     text-decoration: none;
     padding: 1rem;
     border-bottom: 1px solid #444;
 }
 
 nav a:hover, nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #000000;
+    color: #ffffff;
 }
 
 main {
@@ -135,6 +135,7 @@ h1 {
     background: var(--incomplete-bg);
     font-weight: bold;
     border-radius: 4px;
+    color: #000;
 }
 
 .filter-buttons button:hover {
@@ -158,12 +159,12 @@ h1 {
 
 .completed {
     background-color: var(--completed-bg);
-    color: #fff;
+    color: #ffffff;
 }
 
 .incomplete {
     background-color: var(--incomplete-bg);
-    color: #000;
+    color: #000000;
 }
 
 .credits-tally {
