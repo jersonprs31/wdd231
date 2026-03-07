@@ -1,0 +1,188 @@
+:root {
+    --text-color: #000;
+    --bg-color: #f0f0f0;
+    --card-header-bg: #2b2b2b;
+    --card-header-text: #fff;
+    --card-body-bg: #d3d3d3;
+    --nav-bg: #2b2b2b;
+    --nav-text: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+#menu-button {
+    background: #e0e0e0;
+    border: 1px solid #000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.2rem 0.6rem;
+    display: block;
+}
+
+nav {
+    background-color: var(--nav-bg);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    border: 1px solid #000;
+}
+
+.card h2 {
+    background-color: var(--card-header-bg);
+    color: var(--card-header-text);
+    margin: 0;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    background-color: var(--card-body-bg);
+    padding: 1.5rem;
+}
+
+.photo-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-card img {
+    max-width: 100%;
+    height: auto;
+    background-color: #bbb;
+    display: block;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem;
+    flex: 1;
+    cursor: pointer;
+    border: 1px solid #000;
+    background: transparent;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.course-card {
+    padding: 0.8rem;
+    border: 1px solid #000;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.completed {
+    background-color: #a38d6d;
+    color: #fff;
+}
+
+.incomplete {
+    background-color: #fff;
+    color: #000;
+}
+
+.credits-tally {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: var(--card-body-bg);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    filter: invert(0);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}

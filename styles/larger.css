@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+        border-bottom: none;
+        border-right: 1px solid #444;
+    }
+
+    .top-content {
+        flex-direction: row;
+    }
+
+    .about-card {
+        flex: 2;
+    }
+
+    .photo-card {
+        flex: 1;
+    }
+
+    #course-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .course-card {
+        flex: 1 1 30%;
+    }
+}
