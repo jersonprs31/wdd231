@@ -6,6 +6,8 @@
     --card-body-bg: #d3d3d3;
     --nav-bg: #2b2b2b;
     --nav-text: #fff;
+    --completed-bg: #8c8c8c;
+    --incomplete-bg: #e0e0e0;
 }
 
 body {
@@ -130,9 +132,14 @@ h1 {
     flex: 1;
     cursor: pointer;
     border: 1px solid #000;
-    background: transparent;
+    background: var(--incomplete-bg);
     font-weight: bold;
     border-radius: 4px;
+}
+
+.filter-buttons button:hover {
+    background: var(--completed-bg);
+    color: #fff;
 }
 
 #course-list {
@@ -150,12 +157,12 @@ h1 {
 }
 
 .completed {
-    background-color: #a38d6d;
+    background-color: var(--completed-bg);
     color: #fff;
 }
 
 .incomplete {
-    background-color: #fff;
+    background-color: var(--incomplete-bg);
     color: #000;
 }
 
@@ -163,12 +170,14 @@ h1 {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
+    font-weight: bold;
 }
 
 footer {
     background-color: var(--card-body-bg);
     text-align: center;
     padding: 1.5rem;
+    border-top: 1px solid #000;
 }
 
 .social-links {

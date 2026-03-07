@@ -21,7 +21,10 @@ function renderCourses(filter = "All") {
         const courseCard = document.createElement("div");
         courseCard.classList.add("course-card");
         courseCard.classList.add(course.completed ? "completed" : "incomplete");
-        courseCard.innerHTML = `<p>${course.subject} ${course.number}</p>`;
+        
+        const completionMark = course.completed ? "✔ " : "";
+        courseCard.innerHTML = `<p>${completionMark}${course.subject} ${course.number}</p>`;
+        
         courseList.appendChild(courseCard);
     });
 
