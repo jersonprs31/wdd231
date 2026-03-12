@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    #primary-nav {
+        display: flex;
+        width: auto;
+        margin-top: 0;
+    }
+
+    #primary-nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #members-container.grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #members-container.list section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+    }
+}

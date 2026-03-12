@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Pollo Campero",
+    "address": "Centro Comercial Santa Clara, Villa Nueva",
+    "phone": "1777",
+    "website": "https://gt.pollocampero.com",
+    "image": "images/pollocampero.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Famous Guatemalan fried chicken restaurant."
+  },
+  {
+    "name": "Supermercados La Torre",
+    "address": "Km 15.5 Carretera al Pacífico, Villa Nueva",
+    "phone": "2376-7474",
+    "website": "https://www.latorre.com.gt",
+    "image": "images/latorre.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Supermarket offering fresh produce and daily groceries."
+  },
+  {
+    "name": "Banco Industrial",
+    "address": "Plaza Villa Nueva, Zona 4",
+    "phone": "1717",
+    "website": "https://www.corporacionbi.com",
+    "image": "images/bancoindustrial.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Leading financial institution and banking services."
+  },
+  {
+    "name": "CEMACO",
+    "address": "Centro Comercial El Frutal, Villa Nueva",
+    "phone": "2499-9999",
+    "website": "https://www.cemaco.com",
+    "image": "images/cemaco.webp",
+    "membershipLevel": 2,
+    "otherInfo": "Home goods, hardware, and furniture retail store."
+  },
+  {
+    "name": "Helados Sarita",
+    "address": "Parque Central de Villa Nueva",
+    "phone": "2426-8000",
+    "website": "https://www.heladossarita.com",
+    "image": "images/sarita.webp",
+    "membershipLevel": 1,
+    "otherInfo": "Local ice cream parlor with classic and seasonal flavors."
+  },
+  {
+    "name": "Megapaca",
+    "address": "Mercado Nuevo, Zona 4, Villa Nueva",
+    "phone": "7955-5555",
+    "website": "https://www.megapaca.com",
+    "image": "images/megapaca.webp",
+    "membershipLevel": 1,
+    "otherInfo": "Department store specializing in imported clothing and shoes."
+  },
+  {
+    "name": "San Martín",
+    "address": "Centro Comercial Santa Clara, Villa Nueva",
+    "phone": "2215-1515",
+    "website": "https://www.sanmartinbakery.com",
+    "image": "images/sanmartin.webp",
+    "membershipLevel": 3,
+    "otherInfo": "Bakery, cafe, and restaurant serving fresh bread and meals."
+  }
+]
