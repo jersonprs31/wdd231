@@ -91,7 +91,7 @@ main {
     font-size: 1rem;
     cursor: pointer;
     background-color: var(--primary-color);
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     margin: 0 0.2rem;
@@ -109,12 +109,12 @@ main {
 }
 
 #members-container.grid section {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px #0000001a;
 }
 
 #members-container.grid img {
@@ -134,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cccccc;
 }
 
 #members-container.list section img {
