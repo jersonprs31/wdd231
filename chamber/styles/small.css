@@ -155,7 +155,8 @@ footer {
 .hero {
     position: relative;
     text-align: center;
-    color: white;
+    color: #ffffff;
+    background-color: #333333;
     margin-bottom: 2rem;
 }
 
@@ -183,7 +184,7 @@ footer {
     font-weight: bold;
     border-radius: 5px;
     margin-top: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px #0000004d;
 }
 
 .cta-button:hover {
@@ -200,8 +201,8 @@ footer {
     background-color: #f9f9f9;
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #dddddd;
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 #current-weather {
@@ -217,8 +218,8 @@ footer {
 }
 
 .spotlight-card {
-    background: #fff;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
     padding: 1rem;
     text-align: center;
     border-radius: 5px;
