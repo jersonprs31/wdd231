@@ -16,64 +16,135 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-const membersContainer = document.getElementById('members-container');
-const gridBtn = document.getElementById('grid-btn');
-const listBtn = document.getElementById('list-btn');
 const membersURL = 'data/members.json';
 
-async function getMembersData() {
-    try {
-        const response = await fetch(membersURL);
-        const data = await response.json();
-        displayMembers(data);
-    } catch (error) {
-        console.error('Error fetching member data:', error);
+const membersContainer = document.getElementById('members-container');
+if (membersContainer) {
+    const gridBtn = document.getElementById('grid-btn');
+    const listBtn = document.getElementById('list-btn');
+
+    async function getMembersData() {
+        try {
+            const response = await fetch(membersURL);
+            const data = await response.json();
+            displayMembers(data);
+        } catch (error) {
+            console.error('Error fetching member data:', error);
+        }
     }
-}
 
-function displayMembers(members) {
-    membersContainer.innerHTML = '';
+    function displayMembers(members) {
+        membersContainer.innerHTML = '';
+        members.forEach((member) => {
+            const card = document.createElement('section');
+            card.innerHTML = `
+                <img src="${member.image}" alt="${member.name} logo" loading="lazy">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+            `;
+            membersContainer.appendChild(card);
+        });
+    }
 
-    members.forEach((member) => {
-        const card = document.createElement('section');
-        
-        const logo = document.createElement('img');
-        logo.setAttribute('src', member.image);
-        logo.setAttribute('alt', `${member.name} logo`);
-        logo.setAttribute('loading', 'lazy');
-        
-        const name = document.createElement('h3');
-        name.textContent = member.name;
-        
-        const address = document.createElement('p');
-        address.textContent = member.address;
-        
-        const phone = document.createElement('p');
-        phone.textContent = member.phone;
-        
-        const websiteLink = document.createElement('a');
-        websiteLink.setAttribute('href', member.website);
-        websiteLink.setAttribute('target', '_blank');
-        websiteLink.textContent = member.website;
-        
-        card.appendChild(logo);
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(websiteLink);
-        
-        membersContainer.appendChild(card);
+    gridBtn.addEventListener('click', () => {
+        membersContainer.classList.add('grid');
+        membersContainer.classList.remove('list');
     });
+
+    listBtn.addEventListener('click', () => {
+        membersContainer.classList.add('list');
+        membersContainer.classList.remove('grid');
+    });
+
+    getMembersData();
 }
 
-gridBtn.addEventListener('click', () => {
-    membersContainer.classList.add('grid');
-    membersContainer.classList.remove('list');
-});
+const spotlightsContainer = document.getElementById('spotlights-container');
+if (spotlightsContainer) {
+    
+    async function getSpotlights() {
+        try {
+            const response = await fetch(membersURL);
+            const data = await response.json();
+            
+            const qualifiedMembers = data.filter(m => m.membershipLevel === 2 || m.membershipLevel === 3);
+            
+            const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
+            
+            const selectedMembers = shuffled.slice(0, 3);
+            
+            displaySpotlights(selectedMembers);
+        } catch (error) {
+            console.error('Error fetching spotlights:', error);
+        }
+    }
 
-listBtn.addEventListener('click', () => {
-    membersContainer.classList.add('list');
-    membersContainer.classList.remove('grid');
-});
+    function displaySpotlights(members) {
+        spotlightsContainer.innerHTML = '';
+        members.forEach(member => {
+            const card = document.createElement('div');
+            card.className = 'spotlight-card';
+            
+            const levelText = member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member';
+            
+            card.innerHTML = `
+                <h4>${member.name}</h4>
+                <img src="${member.image}" alt="${member.name} Logo" width="100" loading="lazy">
+                <p><strong>${levelText}</strong></p>
+                <hr>
+                <p>${member.phone}</p>
+                <p>${member.address}</p>
+                <a href="${member.website}" target="_blank">Website</a>
+            `;
+            spotlightsContainer.appendChild(card);
+        });
+    }
 
-getMembersData();
+    getSpotlights();
+
+    const apiKey = '15a759ca35f46c36ea8c73e29a404057'; 
+    const lat = 14.5269; 
+    const lon = -90.5875;
+    
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    async function fetchWeather() {
+        try {
+            const weatherResponse = await fetch(weatherURL);
+            if (weatherResponse.ok) {
+                const weatherData = await weatherResponse.json();
+                document.getElementById('current-temp').textContent = Math.round(weatherData.main.temp);
+                document.getElementById('weather-desc').textContent = weatherData.weather[0].description;
+                document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+            }
+
+            const forecastResponse = await fetch(forecastURL);
+            if (forecastResponse.ok) {
+                const forecastData = await forecastResponse.json();
+                const forecastContainer = document.getElementById('forecast-container');
+                forecastContainer.innerHTML = '';
+                
+                const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                let daysCount = 0;
+
+                forecastData.list.forEach(forecast => {
+                    if (forecast.dt_txt.includes("12:00:00") && daysCount < 3) {
+                        const date = new Date(forecast.dt_txt);
+                        const dayName = daysOfWeek[date.getDay()];
+                        const temp = Math.round(forecast.main.temp);
+                        
+                        forecastContainer.innerHTML += `<p><strong>${dayName}:</strong> ${temp}&deg;C</p>`;
+                        daysCount++;
+                    }
+                });
+            }
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+        }
+    }
+
+    fetchWeather();
+}

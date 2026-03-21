@@ -35,4 +35,27 @@
         align-items: center;
         text-align: left;
     }
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "events weather"
+            "spotlights spotlights";
+        gap: 2rem;
+    }
+
+    .events-section { grid-area: events; }
+    .weather-section { grid-area: weather; }
+    .spotlights-section { grid-area: spotlights; }
+
+    .spotlights-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .spotlight-card {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
 }
