@@ -104,7 +104,7 @@ if (spotlightsContainer) {
 
     getSpotlights();
 
-    const apiKey = '15a759ca35f46c36ea8c73e29a404057'; 
+    const apiKey = 'f9593ba139f820ed07eca4e58357bda0'; 
     const lat = 14.5269; 
     const lon = -90.5875;
     
