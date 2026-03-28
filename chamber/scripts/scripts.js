@@ -16,6 +16,11 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
+
 const membersURL = 'data/members.json';
 
 const membersContainer = document.getElementById('members-container');
@@ -104,7 +109,7 @@ if (spotlightsContainer) {
 
     getSpotlights();
 
-    const apiKey = 'f9593ba139f820ed07eca4e58357bda0'; 
+    const apiKey = '15a759ca35f46c36ea8c73e29a404057'; 
     const lat = 14.5269; 
     const lon = -90.5875;
     
@@ -147,4 +152,30 @@ if (spotlightsContainer) {
     }
 
     fetchWeather();
+}
+
+const currentUrl = window.location.href;
+if (currentUrl.includes('thankyou.html')) {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    const showFirst = document.getElementById('showFirst');
+    const showLast = document.getElementById('showLast');
+    const showEmail = document.getElementById('showEmail');
+    const showPhone = document.getElementById('showPhone');
+    const showBusiness = document.getElementById('showBusiness');
+    const showDate = document.getElementById('showDate');
+
+    if (showFirst) showFirst.textContent = urlParams.get('fname');
+    if (showLast) showLast.textContent = urlParams.get('lname');
+    if (showEmail) showEmail.textContent = urlParams.get('email');
+    if (showPhone) showPhone.textContent = urlParams.get('phone');
+    if (showBusiness) showBusiness.textContent = urlParams.get('bizname');
+    
+    if (showDate) {
+        const rawDate = urlParams.get('timestamp');
+        if (rawDate) {
+            const formattedDate = new Date(rawDate).toLocaleString();
+            showDate.textContent = formattedDate;
+        }
+    }
 }

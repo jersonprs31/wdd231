@@ -58,4 +58,11 @@
         flex: 1;
         margin: 0 0.5rem;
     }
+
+    .join-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
 }

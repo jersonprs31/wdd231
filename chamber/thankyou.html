@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Nueva Chamber of Commerce - Thank You</title>
+    <meta name="description" content="Thank you for joining the Villa Nueva Chamber of Commerce.">
+    <meta name="author" content="Jerson Porras">
+    
+    <meta property="og:title" content="Welcome to the Chamber">
+    <meta property="og:description" content="Thank you for your membership application.">
+    <meta property="og:image" content="https://jersonprs31.github.io/wdd231/chamber/social-image.jpg">
+    <meta property="og:url" content="https://jersonprs31.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.webp" alt="Villa Nueva Chamber Logo" width="80" height="80">
+            <h1>Villa Nueva Chamber of Commerce</h1>
+        </div>
+        <button id="menu-btn" aria-label="Toggle Menu">&#9776;</button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="thank-you-container">
+            <h2>Thank You for Your Application!</h2>
+            <p>Your information has been successfully received. We will contact you shortly.</p>
+            
+            <div class="submission-details">
+                <h3>Application Summary</h3>
+                <p><strong>Name:</strong> <span id="showFirst"></span> <span id="showLast"></span></p>
+                <p><strong>Email:</strong> <span id="showEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="showPhone"></span></p>
+                <p><strong>Business/Organization:</strong> <span id="showBusiness"></span></p>
+                <p><strong>Submission Date:</strong> <span id="showDate"></span></p>
+            </div>
+            
+            <a href="index.html" class="cta-button" style="margin-top: 2rem;">Return to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>Villa Nueva Chamber of Commerce</p>
+            <p>1ra Calle 2-33, Zona 4, Villa Nueva</p>
+            <p>info@villanuevachamber.example.com</p>
+            <p>(502) 555-0100</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="currentyear"></span> | Jerson Porras | WDD 231</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
