@@ -50,22 +50,22 @@
                     <fieldset>
                         <legend>Applicant Information</legend>
                         <label>First Name:
-                            <input type="text" name="fname" id="fname" required autocomplete="given-name">
+                            <input type="text" name="fname" id="fname" title="First Name" required autocomplete="given-name">
                         </label>
                         <label>Last Name:
-                            <input type="text" name="lname" id="lname" required autocomplete="family-name">
+                            <input type="text" name="lname" id="lname" title="Last Name" required autocomplete="family-name">
                         </label>
                         <label>Organizational Title:
                             <input type="text" name="title" id="title" pattern="[A-Za-z \-]{7,}" title="Must be at least 7 characters long and contain only letters, spaces, and hyphens." required autocomplete="organization-title">
                         </label>
                         <label>Email Address:
-                            <input type="email" name="email" id="email" placeholder="example@domain.com" required autocomplete="email">
+                            <input type="email" name="email" id="email" title="Email Address" placeholder="example@domain.com" required autocomplete="email">
                         </label>
                         <label>Mobile Phone:
-                            <input type="tel" name="phone" id="phone" required autocomplete="tel">
+                            <input type="tel" name="phone" id="phone" title="Mobile Phone Number" required autocomplete="tel">
                         </label>
                         <label>Business/Organization Name:
-                            <input type="text" name="bizname" id="bizname" required autocomplete="organization">
+                            <input type="text" name="bizname" id="bizname" title="Business or Organization Name" required autocomplete="organization">
                         </label>
                     </fieldset>
 
@@ -88,7 +88,7 @@
                     <fieldset>
                         <legend>Business Description</legend>
                         <label>Brief description of your business:
-                            <textarea name="description" id="description" rows="4"></textarea>
+                            <textarea name="description" id="description" title="Business Description" rows="4"></textarea>
                         </label>
                     </fieldset>
 
@@ -98,25 +98,50 @@
             </section>
 
             <section class="membership-benefits">
-                <h3>Membership Benefits</h3>
-                <div class="benefit-card np-card">
+                <h3>Membership Levels</h3>
+                <div class="benefit-card">
                     <h4>Non Profit Membership</h4>
-                    <p>Free for qualified non-profit organizations. Includes standard directory listing and access to networking events.</p>
+                    <button type="button" class="modal-btn" id="btn-np">View Benefits</button>
                 </div>
-                <div class="benefit-card bronze-card">
+                <div class="benefit-card">
                     <h4>Bronze Membership</h4>
-                    <p>Standard level. Includes directory listing, access to member-only training, and standard event discounts.</p>
+                    <button type="button" class="modal-btn" id="btn-bronze">View Benefits</button>
                 </div>
-                <div class="benefit-card silver-card">
+                <div class="benefit-card">
                     <h4>Silver Membership</h4>
-                    <p>Enhanced level. Includes priority directory listing, spot in home page spotlight rotation, and booth space at expo.</p>
+                    <button type="button" class="modal-btn" id="btn-silver">View Benefits</button>
                 </div>
-                <div class="benefit-card gold-card">
+                <div class="benefit-card">
                     <h4>Gold Membership</h4>
-                    <p>Premium level. Includes top-tier directory placement, guaranteed home page spotlight, event sponsorships, and VIP networking.</p>
+                    <button type="button" class="modal-btn" id="btn-gold">View Benefits</button>
                 </div>
             </section>
         </div>
+
+        <dialog id="dialog-np">
+            <button class="close-modal" aria-label="Close Modal">❌</button>
+            <h3>Non Profit Membership</h3>
+            <p>Free for qualified non-profit organizations. Includes standard directory listing and access to networking events.</p>
+        </dialog>
+
+        <dialog id="dialog-bronze">
+            <button class="close-modal" aria-label="Close Modal">❌</button>
+            <h3>Bronze Membership</h3>
+            <p>Standard level. Includes directory listing, access to member-only training, and standard event discounts.</p>
+        </dialog>
+
+        <dialog id="dialog-silver">
+            <button class="close-modal" aria-label="Close Modal">❌</button>
+            <h3>Silver Membership</h3>
+            <p>Enhanced level. Includes priority directory listing, spot in home page spotlight rotation, and booth space at expo.</p>
+        </dialog>
+
+        <dialog id="dialog-gold">
+            <button class="close-modal" aria-label="Close Modal">❌</button>
+            <h3>Gold Membership</h3>
+            <p>Premium level. Includes top-tier directory placement, guaranteed home page spotlight, event sponsorships, and VIP networking.</p>
+        </dialog>
+
     </main>
 
     <footer>

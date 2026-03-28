@@ -179,3 +179,28 @@ if (currentUrl.includes('thankyou.html')) {
         }
     }
 }
+
+const modals = [
+    { btnId: 'btn-np', dialogId: 'dialog-np' },
+    { btnId: 'btn-bronze', dialogId: 'dialog-bronze' },
+    { btnId: 'btn-silver', dialogId: 'dialog-silver' },
+    { btnId: 'btn-gold', dialogId: 'dialog-gold' }
+];
+
+modals.forEach(modal => {
+    const btn = document.getElementById(modal.btnId);
+    const dialog = document.getElementById(modal.dialogId);
+    
+    if (btn && dialog) {
+        btn.addEventListener('click', () => {
+            dialog.showModal();
+        });
+    }
+});
+
+const closeButtons = document.querySelectorAll('.close-modal');
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('dialog').close();
+    });
+});
