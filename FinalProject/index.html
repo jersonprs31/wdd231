@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Coffee Explorer | Home</title>
+    <meta name="description" content="Discover premium coffee beans from around the world.">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Global Coffee Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoururl.github.io/wdd231/finalproject/">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>Global Coffee Explorer</div>
+        <button id="hamburger-menu" aria-label="Open Navigation">&#9776;</button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="details.html">About Beans</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Coffee Selection</h1>
+        <p id="visit-counter"></p>
+        <div id="data-container" class="grid-layout"></div>
+
+        <dialog id="info-modal">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <button id="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | WDD231</p>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtube.com/" target="_blank">Video Demo</a>
+    </footer>
+</body>
+</html>

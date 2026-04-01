@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Ethiopian Yirgacheffe", "origin": "Ethiopia", "roast": "Light", "price": 18.99, "description": "Floral and bright with notes of jasmine and citrus." },
+  { "id": 2, "name": "Colombian Supremo", "origin": "Colombia", "roast": "Medium", "price": 16.50, "description": "Balanced and smooth with a nutty, chocolate finish." },
+  { "id": 3, "name": "Sumatra Mandheling", "origin": "Indonesia", "roast": "Dark", "price": 17.00, "description": "Earthy, full-bodied with low acidity and herbal notes." },
+  { "id": 4, "name": "Costa Rica Tarrazu", "origin": "Costa Rica", "roast": "Medium", "price": 19.25, "description": "Crisp acidity with sweet honey and crisp apple notes." },
+  { "id": 5, "name": "Guatemala Antigua", "origin": "Guatemala", "roast": "Medium-Dark", "price": 18.00, "description": "Complex and spicy with a velvety cocoa texture." },
+  { "id": 6, "name": "Kenya AA", "origin": "Kenya", "roast": "Light", "price": 21.00, "description": "Bold, fruity flavors reminiscent of wine and berries." },
+  { "id": 7, "name": "Brazilian Santos", "origin": "Brazil", "roast": "Medium", "price": 15.00, "description": "Soft, nutty, and low acidity, perfect for espresso." },
+  { "id": 8, "name": "Jamaica Blue Mountain", "origin": "Jamaica", "roast": "Medium", "price": 45.00, "description": "Mild, beautifully balanced with a lack of bitterness." },
+  { "id": 9, "name": "Hawaii Kona", "origin": "USA", "roast": "Medium", "price": 40.00, "description": "Rich, smooth, and slightly sweet with a buttery finish." },
+  { "id": 10, "name": "Tanzania Peaberry", "origin": "Tanzania", "roast": "Light-Medium", "price": 19.50, "description": "Bright acidity with notes of blackcurrant and chocolate." },
+  { "id": 11, "name": "Panama Geisha", "origin": "Panama", "roast": "Light", "price": 55.00, "description": "Extraordinary floral aroma with tea-like delicacy." },
+  { "id": 12, "name": "Yemen Mocha", "origin": "Yemen", "roast": "Medium-Dark", "price": 28.00, "description": "Wild, earthy, and complex with strong chocolate tones." },
+  { "id": 13, "name": "Peru Organic", "origin": "Peru", "roast": "Medium", "price": 16.00, "description": "Mellow and sweet with hints of vanilla and almond." },
+  { "id": 14, "name": "Vietnam Robusta", "origin": "Vietnam", "roast": "Dark", "price": 14.50, "description": "Strong, harsh, and highly caffeinated. Great for iced coffee." },
+  { "id": 15, "name": "Mexican Chiapas", "origin": "Mexico", "roast": "Light-Medium", "price": 15.75, "description": "Light body, brisk acidity, and a snappy, clean finish." }
+]
