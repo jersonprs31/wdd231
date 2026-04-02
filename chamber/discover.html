@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Nueva Chamber of Commerce - Discover</title>
+    <meta name="description" content="Discover items of interest, attractions, and demographics in the Villa Nueva area.">
+    <meta name="author" content="Jerson Porras">
+    
+    <meta property="og:title" content="Discover Villa Nueva">
+    <meta property="og:description" content="Explore attractions and information about Villa Nueva.">
+    <meta property="og:image" content="https://jersonprs31.github.io/wdd231/chamber/social-image.jpg">
+    <meta property="og:url" content="https://jersonprs31.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/scripts.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.webp" alt="Villa Nueva Chamber Logo" width="80" height="80">
+            <h1>Villa Nueva Chamber of Commerce</h1>
+        </div>
+        <button id="menu-btn" aria-label="Toggle Menu">&#9776;</button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <div class="sidebar">
+            <div id="visit-message" class="visit-message"></div>
+            <div class="demographics">
+                <h3>Area Demographics</h3>
+                <p><strong>Population:</strong> ~1.5 Million</p>
+                <p><strong>Climate:</strong> Temperate (15°C - 26°C)</p>
+                <p><strong>Economy:</strong> Industry, Commerce, Agriculture</p>
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <h2>Discover Villa Nueva</h2>
+            <div id="discover-container" class="discover-grid"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>Villa Nueva Chamber of Commerce</p>
+            <p>1ra Calle 2-33, Zona 4, Villa Nueva</p>
+            <p>info@villanuevachamber.example.com</p>
+            <p>(502) 555-0100</p>
+        </div>
+        <div class="footer-dev">
+            <p>&copy; <span id="currentyear"></span> | Jerson Porras | WDD 231</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
