@@ -356,9 +356,10 @@ form textarea {
     margin-bottom: 1rem;
 }
 
-.demographics h3 {
+.demographics h2 {
     margin-top: 0;
     color: #0b3d91;
+    font-size: 1.25rem;
 }
 
 .discover-grid {
