@@ -67,3 +67,18 @@ if (closeModalBtn) {
 }
 
 init();
+
+const resultsContainer = document.getElementById('results');
+if (resultsContainer) {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.has('fname')) {
+        resultsContainer.innerHTML = `
+            <p><strong>First Name:</strong> ${urlParams.get('fname')}</p>
+            <p><strong>Email:</strong> ${urlParams.get('email')}</p>
+            <p><strong>Favorite Roast:</strong> ${urlParams.get('preference')}</p>
+        `;
+    } else {
+        resultsContainer.innerHTML = `<p>No form data found.</p>`;
+    }
+}
