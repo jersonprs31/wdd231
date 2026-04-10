@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Coffee Explorer | Contact</title>
-    <meta name="description" content="Contact the Global Coffee Explorer team.">
-    <meta name="author" content="Your Name">
-    <meta property="og:title" content="Contact Us">
+    <title>Guatemala Antojitos | Suggest a Dish</title>
+    <meta name="description" content="Contact us to suggest your favorite Guatemalan antojito.">
+    <meta name="author" content="Jerson Porras">
+    <meta property="og:title" content="Suggest an Antojito">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
@@ -14,40 +14,40 @@
 </head>
 <body>
     <header>
-        <div>Global Coffee Explorer</div>
+        <div class="site-title">Guatemala Antojitos</div>
         <button id="hamburger-menu" aria-label="Open Navigation">&#9776;</button>
         <nav id="primary-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="details.html">About Beans</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="index.html">Directory</a></li>
+                <li><a href="details.html">Our Culture</a></li>
+                <li><a href="contact.html" class="active">Suggest a Dish</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Contact Us</h1>
+        <h1>Missing Your Favorite?</h1>
         <form action="form-action.html" method="GET">
-            <label for="fname">First Name:</label>
+            <label for="fname">Your Name:</label>
             <input type="text" id="fname" name="fname" required>
 
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="preference">Favorite Roast:</label>
-            <select id="preference" name="preference" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="light">Light</option>
-                <option value="medium">Medium</option>
-                <option value="dark">Dark</option>
+            <label for="favorite">Which Antojito should we add next?</label>
+            <select id="favorite" name="favorite" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="savory-snack">A savory snack</option>
+                <option value="sweet-dessert">A sweet dessert</option>
+                <option value="traditional-drink">A traditional drink</option>
             </select>
 
-            <button type="submit">Submit Request</button>
+            <button type="submit">Submit Suggestion</button>
         </form>
     </main>
 
     <footer>
-        <p>&copy; 2026 | WDD231</p>
+        <p>&copy; 2026 | Jerson Porras | WDD231 | Guatemala</p>
         <a href="attributions.html">Attributions</a>
         <a href="https://youtube.com/" target="_blank">Video Demo</a>
     </footer>
