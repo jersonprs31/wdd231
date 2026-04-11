@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  #hamburger-menu {
+    display: none;
+  }
+  
+  nav {
+    display: block;
+    position: static;
+    width: auto;
+  }
+  
+  nav ul {
+    flex-direction: row;
+  }
+  
+  nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+  
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
