@@ -215,3 +215,32 @@ footer a {
 footer a:hover {
   text-decoration: none;
 }
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#modal-desc {
+  margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+#results {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.return-link {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
